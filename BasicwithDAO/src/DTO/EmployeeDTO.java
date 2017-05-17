@@ -3,6 +3,10 @@ package DTO;
 public class EmployeeDTO {
 
 	private int id;
+	@Override
+	public String toString() {
+		return "Id = " + id + ", FirstName = " + firstName + ", lastName = " + lastName;
+	}
 	private String firstName, lastName;
 	
 	public int getId() {

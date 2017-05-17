@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="DTO.Question" table="Questions">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<properties name="question"></properties>
+		<list name="answers" cascade="all">
+			<key column="qid"></key>
+			<index column="type"></index>
+			<one-to-many class="DAO.Answer" />
+		</list>
+	</class>
+	
+	<class name="DAO.Answer" table="Answers">
+	<id name="id"><generator class="native"></generator></id>
+	<property name="answername"></property>
+	<property name="postedBy"></property>
+	</class>
+	
+</hibernate-mapping>
