@@ -51,6 +51,7 @@ public class UserDao {
 		}
 	}
 
+		// Update Data With Given ID.
 	public void updateUser(String email, int id) {
 		System.out.println("Update() is called");
 		Transaction trns = null;
@@ -91,7 +92,7 @@ public class UserDao {
 		} catch (RuntimeException e) {
 			e.printStackTrace();
 		} finally {
-			session.flush();
+
 			session.close();
 			System.out.println("AllUsers() is completed");
 

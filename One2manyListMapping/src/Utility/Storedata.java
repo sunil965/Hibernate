@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import org.hibernate.*;
 import org.hibernate.cfg.*;
 
-import DAO.Answer;
+import DAO.FetchData;
+import DTO.Answer;
 import DTO.Question;
 
 public class Storedata {
@@ -15,7 +16,7 @@ public class Storedata {
 		
 		Answer answer1 = new Answer();
 		answer1.setAnswername("java is a programming language");
-		answer1.setPostedBy("Sunil");
+		answer1.setPostedBy("Sunil Kumar");
 		
 		 Answer answer2=new Answer();  
 		 answer2.setAnswername("java implements oops");  
@@ -29,7 +30,7 @@ public class Storedata {
 		question1.setQname("Where is Bridgelabz ?");
 		question1.setAnswers(list1);
 		
-		session.save(question1);
+		session.persist(question1);
 		
 		
 		transaction.commit();

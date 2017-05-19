@@ -1,4 +1,4 @@
-package Utility;
+package DAO;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
-import DAO.Answer;
+import DTO.Answer;
 import DTO.Question;
 
 public class FetchData {
@@ -21,7 +21,7 @@ public class FetchData {
 		Iterator<Question> queIterator = queList.iterator();
 		while (queIterator.hasNext()) {
 			Question question = queIterator.next();
-			System.out.println("Question is : "+question.getQname());
+			System.out.println("Que : "+question.getQname());
 			
 			List<Answer> ansList = question.getAnswers();
 			Iterator<Answer> ansIterator = ansList.iterator();

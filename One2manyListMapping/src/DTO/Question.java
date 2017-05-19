@@ -2,7 +2,7 @@ package DTO;
 
 import java.util.List;
 
-import DAO.Answer;
+import DTO.Answer;
 
 public class Question {
 	public Question(){

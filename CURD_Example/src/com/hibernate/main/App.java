@@ -20,7 +20,8 @@ public class App {
 
 		// Update user with Without HQL Query
 		/*
-		 * user.setEmail("sunil@updatedJdbc.com"); user.setUserid(1);
+		 * user.setEmail("sunil@updatedJdbc.com");
+		 * user.setUserid(1);
 		 * dao.updateUser(user);
 		 */
 
