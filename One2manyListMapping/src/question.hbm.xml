@@ -12,7 +12,7 @@
 		<list name="answers" cascade="all">
 			<key column="qid"></key>
 			<index column="type"></index>
-			<one-to-many class="DTO.Answer" />
+			<one-to-many class="DTO.Answer"/>
 		</list>
 	</class>
 
