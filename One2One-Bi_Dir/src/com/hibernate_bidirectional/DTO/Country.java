@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -30,7 +31,9 @@ public class Country {
 	private int population;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="President", referencedColumnName="P_ID")
+	@PrimaryKeyJoinColumn
+	/*@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="President", referencedColumnName="P_ID")*/
 	private President president;
 
 	public int getCode() {

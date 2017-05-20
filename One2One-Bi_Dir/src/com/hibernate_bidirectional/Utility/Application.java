@@ -33,7 +33,7 @@ public class Application {
 
 		c.setPresident(p);
 		
-		session.save(c);
+		session.persist(c);
 		transaction.commit();
 		session.close();
 		factory.close();
