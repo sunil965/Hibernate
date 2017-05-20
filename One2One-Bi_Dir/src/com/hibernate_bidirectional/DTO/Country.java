@@ -32,8 +32,6 @@ public class Country {
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	@PrimaryKeyJoinColumn
-	/*@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="President", referencedColumnName="P_ID")*/
 	private President president;
 
 	public int getCode() {
